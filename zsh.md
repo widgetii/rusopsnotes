@@ -7,6 +7,10 @@ Zsh](http://alexott.net/ru/writings/zsh/zsh-refcard.pdf)
 
 [Официальный (хотя и старый) гайд](http://zsh.sourceforge.net/Guide/zshguide.html)
 
+[Еще немного документации](http://zsh.sourceforge.net/Doc/)
+
 [Wiki](http://zshwiki.org/home/)
 
 Также нужно проверить [эту документацию](http://bolyai.cs.elte.hu/zsh-manual/zsh_toc.html) на актуальность
+
+http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
