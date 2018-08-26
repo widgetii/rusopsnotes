@@ -25,6 +25,14 @@ LD_LIBRARY_PATH=$LIBDIR:$LD_LIBRARY_PATH
 LD_RUN_PATH=$LIBDIR:$LD_RUN_PATH
 ```
 
+#### Перекомпиляция родного ядра
+
+```
+wget http://vault.centos.org/4.8/updates/SRPMS/kernel-2.6.9-103.EL.src.rpm
+rpm -i kernel-2.6.9-103.EL.src.rpm
+rpmbuild -bb /usr/src/redhat/SPECS/kernel-2.6.spec --target=i686
+```
+
 #### Попытка обновления ядра
 
 Рассмотрено на примере `2.6.36.4`.
