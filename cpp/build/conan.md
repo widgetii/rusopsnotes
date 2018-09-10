@@ -121,6 +121,60 @@ $ pip install conan     # Там где Conan в системных репози
 cmake
 ```
 
+Давайте создадим минимальный файл для системы CMake, который включит в себя
+скрипт, генерируемый системой Conan, который и подставит в дальнейшем правильные
+пути к зависимым библиотекам:
+
+```shell
+$ cat > CMakeLists.txt << 'EOF'
+project(ConanTest)
+cmake_minimum_required(VERSION 3.0)
+
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
+add_executable(conantest conantest.cpp)
+target_link_libraries(conantest ${CONAN_LIBS})
+EOF
+
+$ cat > conantest.cpp <<EOF
+#include <iostream>
+
+int main() { std::cout << "Hello, Conan!" << "\n"; }
+EOF
+```
+
+Фактически нашего внимания здесь потребует только конструкция подключения
+сгенерированного Conanом вспомогательного скрипта `conanbuildinfo.cmake`,
+фукнция вызова этого хелпера из CMake файла `conan_basic_setup()` и
+использование заполненной этим скриптом переменной `${CONAN_LIBS}`, содержащей
+зависимые библиотеки.
+
+Создаем каталог сборки вне наших исходников и запускаем `conan install`:
+
+```shell
+$ mkdir build && cd build
+$ conan install ..
+
+PROJECT: Generator cmake created conanbuildinfo.cmake
+PROJECT: Generator txt created conanbuildinfo.txt
+PROJECT: Generated conaninfo.txt
+```
+
+Мы обнаружим, что будет создан описываемый ранее хелпер для CMake и два
+текстовых файла, содержимое которых мы будем рассматривать в другой раз.
+Попробуем собрать проект:
+
+```shell
+$ cmake ..
+$ cmake --build .
+$ ./bin/conantest
+Hello, Conan!
+```
+
+Давайте теперь добавим в зависимость какую-нибудь библиотеку, добавив секцию
+`[requires]` в `conanfile.txt`
+
 ### Работа с удаленными репозиториями
 
 При свежей установке conan командой `conan remote list` выдаст только один
