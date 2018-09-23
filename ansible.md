@@ -6,3 +6,8 @@
 ## Ansible и Xen
 
 [Автоматическое создание ВМ через Ansible](https://medium.com/@jrisch/using-ansible-to-automate-vm-creation-on-xenserver-d092aa484a06)
+
+## Ansible и Vim
+
+https://github.com/pearofducks/ansible-vim
+
