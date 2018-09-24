@@ -158,3 +158,7 @@ P.S. По состоянию на середину 2018 года OpenSSH кли�
 https://winaero.com/blog/enable-openssh-server-windows-10/
 https://www.bleepingcomputer.com/news/microsoft/how-to-install-the-built-in-windows-10-openssh-server/
 
+### Вариант с Docker образами
+
+https://app.vagrantup.com/StefanScherer/boxes/windows_2016_docker
+
