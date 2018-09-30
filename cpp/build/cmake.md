@@ -16,3 +16,7 @@
 
 * [Подключение QtSingleApplication](https://github.com/qbittorrent/qBittorrent/blob/master/src/CMakeLists.txt#L61)
 
+#### Boost
+
+[Модульный подход с помощью Conan](https://github.com/bincrafters/conan-cmake_findboost_modular)
+
