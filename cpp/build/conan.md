@@ -509,3 +509,57 @@ ERROR: Permission denied for user: 'demo'. [Remote: my_local_server]
 
 * Суперпроекты - воркспейсы
 
+### Создание пакетов с утилитами и компиляторами
+
+#### Утилита с готовым бинарником в пакет
+
+[На примере jom от Qt, скачиваем exe с сайта и кладем в пакет](https://github.com/bincrafters/conan-jom_installer/)
+
+#### Утилита из тарбола в пакет
+
+* [На примере Flex под Unix с использованием
+configure](https://github.com/bincrafters/conan-flex). Для контрпримера того же
+Flex под Windows со сборкой тарбола с помощью CMake можно посмотреть на
+[Winflexbison](https://github.com/bincrafters/conan-winflexbison). Ну и не могу
+указать [bison под Unix](https://github.com/bincrafters/conan-bison)
+
+* [Компилятор Protoc](https://github.com/bincrafters/conan-protoc_installer)
+
+* [Компилятор Ragel](https://github.com/bincrafters/conan-ragel_installer)
+
+* [Пример использования tools.patch для сборки elfutils](https://github.com/bincrafters/conan-elfutils)
+
+* [Пример определения архитектуры, платформы, установки зависимостей через
+    pacman под Windows для Bazel](https://github.com/bincrafters/conan-bazel_installer)
+
+#### Установка сборочной среды с помощью пакета
+
+[На примере msys2](https://github.com/bincrafters/conan-msys2_installer)
+
+#### Сборочные среды под Docker
+
+* [Linux CentOS 7.4 with GCC 4.8](https://github.com/bincrafters/docker-centos-gcc48) и [docker-centos-gcc48-i386](https://github.com/bincrafters/docker-centos-gcc48-i386)
+
+* [MinGW with GCC7 on Linux](https://github.com/bincrafters/docker-mingw-gcc7)
+
+* [Visual Studio Build Tools 2017](https://github.com/bincrafters/docker-win1803-vctools1572)
+
+* [Linux Manjaro with Clang 6.0](https://github.com/bincrafters/docker-manjaro-clang6)
+
+* [Arch Linux with GCC8](https://github.com/bincrafters/docker-archlinux-gcc8) и
+    [Arch Linux with GCC8 (i386)](https://github.com/bincrafters/docker-archlinux-gcc8-i386)
+
+#### Сборка компиляторов из исходников
+
+* [Gcc](https://github.com/bincrafters/docker-gcc-builder)
+
+* [Clang](https://github.com/bincrafters/docker-clang-builder)
+
+#### Генерация установочных пакетов
+
+* [Windows MSI](https://github.com/bincrafters/go-msi)
+
+* [Linux RPM](https://github.com/bincrafters/go-bin-rpm)
+
+* [Linux Deb](https://github.com/bincrafters/go-bin-deb)
+

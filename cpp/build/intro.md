@@ -6,3 +6,7 @@
 
 * `Пакетный менеджер` - `Conan`
 
+### CI
+
+https://github.com/ZaMaZaN4iK/cpp-russia-hello/blob/master/slides.pdf
+
