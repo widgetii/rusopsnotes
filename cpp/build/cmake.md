@@ -37,6 +37,37 @@ $ export CXX=/usr/bin/clang++
 #### Как правильно работать с BuildType
 
 [CMake and the Default Build Type](https://blog.kitware.com/cmake-and-the-default-build-type/)
+=======
+#### Как поставить последнюю версию на 64-бит Linux систему в /usr/local
+
+```shell
+$ cd $HOME
+$ wget https://cmake.org/files/v3.12/cmake-3.12.0-Linux-x86_64.sh
+$ sudo sh cmake-3.12.0-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir
+```
+
+Проверить:
+
+```
+$ cmake --version | head -n1
+```
+
+Удалить:
+
+```
+$ sudo rm -rfv /usr/local/bin/{cmake,cpack,ccmake,cmake-gui,ctest} \
+             /usr/local/doc/cmake \
+             /usr/local/man1/{ccmake.1,cmake.1,cmake-gui.1,cpack.1,ctest.1} \
+             /usr/local/man7/cmake-* \
+             /usr/local/share/cmake-3.12
+```
+
+#### Можно установить CMake для локального пользователя через pip
+
+```shell
+$ pip install cmake --user
+$ export PATH=~/.local/bin:$PATH
+```
 
 ### Кросскомпиляция
 
