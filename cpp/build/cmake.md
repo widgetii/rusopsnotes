@@ -34,6 +34,10 @@ $ export CC=/usr/bin/clang
 $ export CXX=/usr/bin/clang++
 ```
 
+#### Как правильно работать с BuildType
+
+[CMake and the Default Build Type](https://blog.kitware.com/cmake-and-the-default-build-type/)
+
 ### Кросскомпиляция
 
 [Crosscompiling](https://gitlab.kitware.com/cmake/community/wikis/doc/cmake/CrossCompiling)
@@ -55,4 +59,8 @@ $ export CXX=/usr/bin/clang++
 #### Boost
 
 [Модульный подход с помощью Conan](https://github.com/bincrafters/conan-cmake_findboost_modular)
+
+#### GTest
+
+[Dynamic Google Test Discovery in CMake 3.10](https://blog.kitware.com/dynamic-google-test-discovery-in-cmake-3-10/)
 

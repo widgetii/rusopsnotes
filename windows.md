@@ -153,7 +153,22 @@ https://null-byte.wonderhowto.com/how-to/enable-new-native-ssh-client-windows-10
 P.S. По состоянию на середину 2018 года OpenSSH клиент уже включен в состав
 системы по-умолчанию (по крайней мере для Win10 Pro).
 
+Смотрим что у нас есть в наличии:
+
+```
+> Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+```
+
+Дальше ставим клиент (у меня уже был Installed) или сервер:
+
+```
+> Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+> Start-Service -Name sshd
+```
+
 ### Установка OpenSSH сервера
+
+См. выше
 
 https://winaero.com/blog/enable-openssh-server-windows-10/
 https://www.bleepingcomputer.com/news/microsoft/how-to-install-the-built-in-windows-10-openssh-server/
