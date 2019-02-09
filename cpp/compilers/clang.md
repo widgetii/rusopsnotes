@@ -63,3 +63,5 @@
 
 * [Много статьей по LLVM на Habr](https://habr.com/users/32bit_me/posts/)
 
+### Clang LibTooling (более новый C++ API)
+

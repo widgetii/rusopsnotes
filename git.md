@@ -113,6 +113,8 @@ https://samthursfield.wordpress.com/2016/03/16/enourmous-git-repositories/
 * `git commit -a` - создать новый коммит из текущего индекса. Ключ `-a` неявно
     перед этой операцией выполняет `git add -u`
 
+* `git diff --cached` - что мы будем коммитить
+
 * `git reset` - обратная операция для `git add`
 
 ### Ветвление

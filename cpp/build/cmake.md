@@ -37,7 +37,7 @@ $ export CXX=/usr/bin/clang++
 #### Как правильно работать с BuildType
 
 [CMake and the Default Build Type](https://blog.kitware.com/cmake-and-the-default-build-type/)
-=======
+
 #### Как поставить последнюю версию на 64-бит Linux систему в /usr/local
 
 ```shell

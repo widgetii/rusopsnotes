@@ -22,3 +22,9 @@ MSBuild](https://blogs.msdn.microsoft.com/vcblog/2018/08/13/using-msvc-in-a-dock
 
 [Воркшоп по работе с Windows Docker контейнерами](http://stefanscherer.github.io/windows-docker-workshop/)
 
+## Отключить ограничения безопасности
+
+```
+docker run -it --security-opt seccomp:unconfined ubuntu
+```
+
