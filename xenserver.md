@@ -39,3 +39,8 @@ echo xenguest_enable=\"YES\" >> /etc/rc.conf
 [Документация по сетевой настройке](https://docs.citrix.com/de-de/xenserver/index/ch04/ch04s04.html)
 
 [Краткое описание командного интерфейса](https://wiki.xenproject.org/wiki/XAPI_Command_Line_Interface)
+
+[XenServer tips and tricks](https://xen-orchestra.com/forum/topic/262/xenserver-tips-and-tricks)
+
+[Getting rid of unused virtual disks on XenServer](http://deepix.github.io/2017/02/01/xsvdi.html)
+
