@@ -25,6 +25,12 @@
 ### C++17
 
 [xeus-cling](https://github.com/QuantStack/xeus-cling)
+Install from Miniconda (brew version) and then kernels copying
+
+```shell
+cd /usr/local/miniconda3
+cp -r ./envs/xeus-cling/share/jupyter/kernels/* ~/Library/Jupyter/kernels/
+```
 
 #### Rust
 
