@@ -1,3 +1,11 @@
+### Vagrant и libvirt
+
+Устанавливаем плагин для поддержки: `vagrant plugin install vagrant-libvirt`
+
+Берем бокс с [поддержкой libvirt](https://app.vagrantup.com/boxes/search?provider=libvirt) либо конвертируем существующий `vagrant plugin install vagrant-mutate` и затем `vagrant mutate trusty64 libvirt`
+
+Запускаем: `VAGRANT_DEFAULT_PROVIDER=libvirt vagrant up`
+
 ### Манипуляция машинами
 
 #### Windows
@@ -51,6 +59,10 @@ virsh # shapshot-revert --domain win10 --snapshotname 01_after_install --running
 virsh # destroy win10
 virsh # undefine win10
 ```
+
+#### Дополнительно
+
+XML с описаниями текущих снапшотов лежат в каталоге `/var/lib/libvirt/qemu/snapshot`
 
 ### Дополнительное чтение
 
