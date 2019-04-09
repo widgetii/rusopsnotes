@@ -8,6 +8,37 @@
 
 ### Манипуляция машинами
 
+### Снапшоты для резервного копирования
+
+Смотрим какие диски есть у ВМ (в примере, это `vm1`):
+
+```shell
+virsh domblklist vm1
+```
+
+Делаем живой снэпшот:
+
+```shell
+virsh snapshot-create-as --domain vm1 snapshot1 --diskspec vda,file=/var/lib/libvirt/images/vmsnapshot1.qcow2 --disk-only --atomic --no-metadata
+```
+
+После этой команды у нас активен вновь созданный снэпшот и, при необходимости,
+можно выполнить резервное копирование старого диска. Далее нам нужно закоммитить
+все произошедшие изменения в оригинал:
+
+```shell
+virsh blockcommit vm1 vda --active --verbose --pivot
+```
+
+Теперь файл спапшота можно снести
+
+```shell
+rm /var/lib/libvirt/images/vmsnapshot1.qcow2
+```
+
+Для консистентных бэкапов файловых систем используйте Qemu Guest Agent и ключ
+`–quiesce` при создании снэпшотов.
+
 #### Windows
 
 Создание
@@ -52,7 +83,7 @@ virsh # shutdown --domain win10
 virsh # shapshot-revert --domain win10 --snapshotname 01_after_install --running
 ```
 
-Чтобы снести систему надо дать две команды на оснанов машины и ее удаление (диск
+Чтобы снести систему надо дать две команды на останов машины и ее удаление (диск
 при этом остается и его нужно удалять вручную):
 
 ```shell

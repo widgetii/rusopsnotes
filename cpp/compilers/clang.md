@@ -65,3 +65,27 @@
 
 ### Clang LibTooling (более новый C++ API)
 
+### Сборка всего подряд из исходников
+
+```
+git clone https://git.llvm.org/git/llvm.git
+git clone https://git.llvm.org/git/clang.git llvm/tools/clang
+git clone https://git.llvm.org/git/lldb.git llvm/tools/lldb 
+git clone https://git.llvm.org/git/clang-tools-extra.git llvm/tools/clang/tools/extra
+# (required to build sanitizers)
+git clone https://git.llvm.org/git/compiler-rt.git llvm/projects/compiler-rt
+# (required for OpenMP support)
+
+# libcxx and libcxxabi
+
+cd llvm
+cmake -H. -BRelease -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DLLVM_ENABLE_LLD=ON -DLLVM_TARGETS_TO_BUILD=X86
+ninja -C Release clang clangFormat clangFrontendTool clangIndex clangTooling cxx
+```
+
+```
+git clone https://github.com/llvm/llvm-project.git
+cd llvm-project
+cmake -Hllvm -BRelease -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DLLVM_ENABLE_LLD=OFF -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_ENABLE_PROJECTS="clang;libcxx"
+ninja -C Release clang clangd clangd-indexer clangFormat clangFrontendTool clangIndex clangTooling cxx
+```
