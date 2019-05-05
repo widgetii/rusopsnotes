@@ -32,6 +32,8 @@ cd /usr/local/miniconda3
 cp -r ./envs/xeus-cling/share/jupyter/kernels/* ~/Library/Jupyter/kernels/
 ```
 
+[Interactive C++: Meet Jupyter / Cling - Neil Horlock, ACCU 2019](https://www.youtube.com/watch?v=UzfYG8GdB3I)
+
 #### Rust
 
 [EvCxR](https://github.com/google/evcxr/blob/master/evcxr_jupyter/README.md),

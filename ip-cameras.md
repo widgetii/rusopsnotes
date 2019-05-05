@@ -1,15 +1,15 @@
 ### Рекомендуемые чипы и матрицы
 
-Чипы:
+#### Чипы
 
-* [Hi3518e](https://github.com/PeterEmbedded/Hi3518E-IP-Camera) — для матриц ~1.3 мегапикс. (1280 х 960). И [еще](https://zftlab.org/pages/2015090300.html)
+* [Hi3518e](https://github.com/PeterEmbedded/Hi3518E-IP-Camera) — для матриц ~1.3 мегапикс. (1280 х 960). И [еще](https://zftlab.org/pages/2015090300.html). [Сравнение чипов Hi3518E и Hi3518C](http://www.cctvsp.ru/articles/soc-protsessor-ip-kamer-hi3518e-protiv-hi3518c)
 
 * Hi3516 — для матриц ~2 мегапикс. и более. Последние модели этой серии делаются
     на базе модификации Hi3516Ev100 и [Hi3516Cv300](http://support.hkvstar.com/file/Hi3516CV300_DataSheet_Brief.pdf)
 
 * Hi3519 - для высоких разрешений
 
-Матрицы:
+### Матрицы
 
 * Sony IMX225 и Aptina AR0130, обе 1.3 Мпикс, та, что от Sony — намного лучше работает в темноте. Hi3518e + IMX225 — не смог полностью отключить шарпенинг, но при слабой освещённости оно вроде не мешает. В случае с Hi3518e + AR0130 — отключается полностью.
 
@@ -21,7 +21,9 @@
 
 При низкой освещённости матрицы с более высоким разрешением работают хуже и им требуются хорошие объективы
 
-Интересные ссылки:
+[Более полный обзор по матрицам](http://www.cctvsp.ru/articles/obzor-i-sravnenie-matrits-dlya-kamer-videonablyudeniya)
+
+#### Интересные ссылки
 
 http://marcusjenkins.com/linux/hacking-cheap-ebay-ip-camera/
 http://www.hkvstar.com/technology-news/china-ip-camera-configuration-firmware.html
