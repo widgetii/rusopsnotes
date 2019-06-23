@@ -1,4 +1,6 @@
-### clang-tools-extra
+# Clang & LLVM notes
+
+## clang-tools-extra
 
 * [Линтер Clang Tidy](https://clang.llvm.org/extra/clang-tidy/index.html)
 
@@ -15,9 +17,11 @@
 
 * [Clang-Doc](https://clang.llvm.org/extra/clang-doc.html)
 
-### Сторонние утилиты на базе Clang
+## Сторонние утилиты на базе Clang
 
-* [Autoprogrammer, the C++ code generation](https://github.com/flexferrum/autoprogrammer): PIMPL generator, enum to string converter, unit test methods (and mock classes) generation
+* [Autoprogrammer, the C++ code generation](https://github.com/flexferrum/autoprogrammer):
+  PIMPL generator, enum to string converter, unit test methods (and mock classes) 
+  generation
 
 * У LibreOffice есть отличная пачка [плагинов к clang](https://github.com/LibreOffice/core/tree/master/compilerplugins/clang) для статического анализа кода проекта
 
@@ -26,34 +30,34 @@
 * [Декомпилятор бинарников в IR LLVM](https://github.com/trailofbits/mcsema),
     [статья на Habr](https://habr.com/post/347000/)
 
-### Language servers
+## Language servers
 
 * [Clangd](https://clang.llvm.org/extra/clangd.html)
 
-### Интересные патчи
+## Интересные патчи
 
 * [Реализация концептов в Clang](https://github.com/saarraz/clang-concepts),
     онлайн версия на [godbolt](https://godbolt.org/g/Xthpfw), [обсуждение](https://www.reddit.com/r/cpp/comments/958sj9/clang_concepts_is_now_featurecomplete/)
-    
+
     Сборка:
 
     ```shell
     $ git clone http://llvm.org/git/llvm.git
     $ take llvm
-    $ git checkout 893a41656b527af1b00a1f9e5c8fcecfff62e4b6  # see actual commit on github
+    $ git checkout 893a41656b527af1b00a1f9e5c8fcecfff62e4b6   see actual commit on github
     $ cd tools
     $ git clone https://github.com/saarraz/clang-concepts clang
     $ cd ../..
     $ cmake -Hllvm -Bbuild -G "Ninja"
     $ cmake --build build
-    # check working for binary files
+     check working for binary files
     $ cd build/bin
     $ ./clang --help
     $ export CC=$(pwd)/clang
     $ export CXX=$(pwd)/clang++
     ```
 
-### Clang API
+## Clang API
 
 * [Choosing the Right Interface for Your Application](https://clang.llvm.org/docs/Tooling.html)
 
@@ -63,29 +67,20 @@
 
 * [Много статьей по LLVM на Habr](https://habr.com/users/32bit_me/posts/)
 
-### Clang LibTooling (более новый C++ API)
+## Clang LibTooling (более новый C++ API)
 
-### Сборка всего подряд из исходников
+## Сборка всего подряд из исходников
 
-```
-git clone https://git.llvm.org/git/llvm.git
-git clone https://git.llvm.org/git/clang.git llvm/tools/clang
-git clone https://git.llvm.org/git/lldb.git llvm/tools/lldb 
-git clone https://git.llvm.org/git/clang-tools-extra.git llvm/tools/clang/tools/extra
-# (required to build sanitizers)
-git clone https://git.llvm.org/git/compiler-rt.git llvm/projects/compiler-rt
-# (required for OpenMP support)
+[Building Clang and Working with the Code](http://clang.llvm.org/get_started.html)
 
-# libcxx and libcxxabi
-
-cd llvm
-cmake -H. -BRelease -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DLLVM_ENABLE_LLD=ON -DLLVM_TARGETS_TO_BUILD=X86
-ninja -C Release clang clangFormat clangFrontendTool clangIndex clangTooling cxx
-```
-
-```
+```sh
 git clone https://github.com/llvm/llvm-project.git
 cd llvm-project
-cmake -Hllvm -BRelease -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DLLVM_ENABLE_LLD=OFF -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_ENABLE_PROJECTS="clang;libcxx"
-ninja -C Release clang clangd clangd-indexer clangFormat clangFrontendTool clangIndex clangTooling cxx
+cmake -Hllvm -BRelease -G Ninja -DCMAKE_BUILD_TYPE=Release \
+    -DBUILD_SHARED_LIBS=ON -DLLVM_ENABLE_LLD=OFF -DLLVM_TARGETS_TO_BUILD=X86 \
+    -DLLVM_ENABLE_PROJECTS="clang;libcxx;clang-tools-extra"
+ninja -C Release clang clangd clangd-indexer clangFormat clangFrontendTool \
+    clangIndex clangTooling cxx
 ```
+
+ -DLIBCXXABI_ENABLE_SHARED=ON
