@@ -1,3 +1,5 @@
+# Zsh
+
 ## Современный шелл Zsh
 
 Начать изучение можно с [этого руководства](http://alexott.net/ru/writings/zsh/index.html)
@@ -11,7 +13,8 @@ Zsh](http://alexott.net/ru/writings/zsh/zsh-refcard.pdf)
 
 [Wiki](http://zshwiki.org/home/)
 
-Также нужно проверить [эту документацию](http://bolyai.cs.elte.hu/zsh-manual/zsh_toc.html) на актуальность
+Также нужно проверить [эту
+документацию](http://bolyai.cs.elte.hu/zsh-manual/zsh_toc.html) на актуальность
 
 http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 
@@ -21,3 +24,6 @@ http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 редактирования текущей строки. В режиме совместимости с Bash существует аналогичная
 комбинация `Ctrl-X Ctrl-E`
 
+## Источники вдохновения
+
+https://github.com/rhysd/dogfiles/blob/master/zshrc
