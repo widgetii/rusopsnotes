@@ -5,7 +5,8 @@
 - [Линтер Clang Tidy](https://clang.llvm.org/extra/clang-tidy/index.html)
 
 - [Clang-Include-Fixer](https://clang.llvm.org/extra/include-fixer.html),
-  добавляющий #include в исходный текст программ
+  добавляющий #include в исходный текст программ (неактуально, так как это может
+  делать Clangd)
 
 - [Modularize](https://clang.llvm.org/extra/modularize.html)
 
@@ -16,6 +17,9 @@
   namespaces etc
 
 - [Clang-Doc](https://clang.llvm.org/extra/clang-doc.html)
+
+- clang-format, есть целый [сайт](https://clangformat.com/) для интерактивного
+    формирования файла со стилем
 
 ## Сторонние утилиты на базе Clang
 
