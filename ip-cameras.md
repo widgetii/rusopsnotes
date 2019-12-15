@@ -75,3 +75,18 @@ CTU не обязательно должны быть квадратными (к
 
 [Преимущества протоколов H.265+, H.265++ или H.265X](http://www.youcam.pro/new-protocol-H265X)
 
+#### OpenIPC
+
+```
+V1
+hi3516cv100|hi3518av100|hi3518cv100|hi3518ev100)
+kernel 3.0.8      <= сделано на 95%, но готового нет
+
+V2
+hi3516cv200|hi3518ev200|hi3518ev201)
+kernel 3.4.35      <= есть OpenWRT на openipc.org для сенсоров Aptina AR0130 и Sony IMX222/IMX323
+
+V3
+hi3516сv300|hi3516ev100)
+kernel 3.18.20   <= и конь не валялся
+```
