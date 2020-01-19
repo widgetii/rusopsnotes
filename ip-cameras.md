@@ -9,6 +9,11 @@
 
 * Hi3519 - для высоких разрешений
 
+> Е или С без разницы?
+
+У С память внешняя и ее больше может быть
+У Е она встроена и там 64
+
 ### Матрицы
 
 * Sony IMX225 и Aptina AR0130, обе 1.3 Мпикс, та, что от Sony — намного лучше работает в темноте. Hi3518e + IMX225 — не смог полностью отключить шарпенинг, но при слабой освещённости оно вроде не мешает. В случае с Hi3518e + AR0130 — отключается полностью.
@@ -90,3 +95,14 @@ V3
 hi3516сv300|hi3516ev100)
 kernel 3.18.20   <= и конь не валялся
 ```
+#### SDK
+
+##### Version Mapping of the Toolchain
+
+Hi3516C V300R001C01SPC030 -> arm-hisiv500-linux
+
+### WebRTC and other ways to stream to browser
+
+- [Kurento Media Server](https://github.com/Kurento/kurento-media-server) It is responsible for media transmission, processing, loading and recording. It is implemented in low level technologies based on GStreamer
+- [WebRTC-streamer](https://github.com/mpromonet/webrtc-streamer) WebRTC-streamer is an experiment to stream video capture devices and RTSP sources through WebRTC using simple mechanism
+- [videostreamer](https://github.com/horgh/videostreamer) provides a way to stream video from an input source to HTTP. It remuxes a video input into an MP4 container which it streams to connecting clients (uses ffmpeg). Read README and use like `./videostreamer -input='rtsp://192.168.1.10/user=admin&password=&channel=1&stream=0' -fcgi=false -verbose -format=rtsp `
