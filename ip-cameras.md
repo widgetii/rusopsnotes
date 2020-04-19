@@ -1,6 +1,8 @@
 ### Рекомендуемые чипы и матрицы
 
-#### Чипы
+#### Чипы от Hisilicon
+
+Актуальный [каталог камер](http://www.hisilicon.com/en/Products/ProductList/Camera)
 
 * [Hi3518e](https://github.com/PeterEmbedded/Hi3518E-IP-Camera) — для матриц ~1.3 мегапикс. (1280 х 960). И [еще](https://zftlab.org/pages/2015090300.html). [Сравнение чипов Hi3518E и Hi3518C](http://www.cctvsp.ru/articles/soc-protsessor-ip-kamer-hi3518e-protiv-hi3518c)
 
@@ -108,3 +110,9 @@ kernel 3.18.20   <= и конь не валялся
 - [WebRTC-streamer](https://github.com/mpromonet/webrtc-streamer) WebRTC-streamer is an experiment to stream video capture devices and RTSP sources through WebRTC using simple mechanism
 
 - [videostreamer](https://github.com/horgh/videostreamer) provides a way to stream video from an input source to HTTP. It remuxes a video input into an MP4 container which it streams to connecting clients (uses ffmpeg). Read README and use like `./videostreamer -input='rtsp://192.168.1.10/user=admin&password=&channel=1&stream=0' -fcgi=false -verbose -format=rtsp `
+
+### Доп оборудование
+
+#### Микрофоны
+
+MAX9814 по 35 рублей, можно запитать от выхода USB 5V
