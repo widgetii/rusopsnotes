@@ -20,7 +20,9 @@
 
 * Sony IMX291 FullHD 
 
-* Sony IMX178 5 Мпикс 
+* Sony IMX178 5Mpx (IMX178 уже давно не производят, продаются остатки)
+
+* Sony IMX335 5Mpx 2592х1944
 
 * OmniVision OS08A10 4K
 
@@ -30,13 +32,16 @@
 
 #### Интересные ссылки
 
-http://marcusjenkins.com/linux/hacking-cheap-ebay-ip-camera/
-http://www.hkvstar.com/technology-news/china-ip-camera-configuration-firmware.html
-[Инженерное решение IP камера + роутер NEXX WT3020F + модем 4G Huawei E3372](http://www.youcam.pro/4G-camera)
+- http://marcusjenkins.com/linux/hacking-cheap-ebay-ip-camera/
+
+- http://www.hkvstar.com/technology-news/china-ip-camera-configuration-firmware.html
+
+- [Инженерное решение IP камера + роутер NEXX WT3020F + модем 4G Huawei E3372](http://www.youcam.pro/4G-camera)
 
 ### Облачные провайдеры для видео
 
 [IpEye](https://www.ipeye.ru/tarify)
+
 [Ivideon](https://ru.ivideon.com/)
 
 ### Форматы
@@ -95,14 +100,11 @@ V3
 hi3516сv300|hi3516ev100)
 kernel 3.18.20   <= и конь не валялся
 ```
-#### SDK
-
-##### Version Mapping of the Toolchain
-
-Hi3516C V300R001C01SPC030 -> arm-hisiv500-linux
 
 ### WebRTC and other ways to stream to browser
 
 - [Kurento Media Server](https://github.com/Kurento/kurento-media-server) It is responsible for media transmission, processing, loading and recording. It is implemented in low level technologies based on GStreamer
+
 - [WebRTC-streamer](https://github.com/mpromonet/webrtc-streamer) WebRTC-streamer is an experiment to stream video capture devices and RTSP sources through WebRTC using simple mechanism
+
 - [videostreamer](https://github.com/horgh/videostreamer) provides a way to stream video from an input source to HTTP. It remuxes a video input into an MP4 container which it streams to connecting clients (uses ffmpeg). Read README and use like `./videostreamer -input='rtsp://192.168.1.10/user=admin&password=&channel=1&stream=0' -fcgi=false -verbose -format=rtsp `

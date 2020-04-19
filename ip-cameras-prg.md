@@ -31,8 +31,6 @@ https://github.com/IENT/YUView
 
 https://github.com/virinext/hevcesbrowser (анализ битового потока для h265)
 
-https://github.com/virinext/hevcesbrowser
-
 
 ## Серверы вещания
 
